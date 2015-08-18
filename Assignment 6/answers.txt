@@ -1,0 +1,22 @@
+//answers.txt, written by Isaac Chan and Xilun Guo
+
+1. int DFS is O(N^2), due to the for-loop within the while-loop, or O(numVertices*numNeighbors).
+int BFS is the same, O(numVertices*numNeighbors). 
+void computeAdjacencyMatrix is O(N^2), due to the nested for-loop, or (numVertices*numNeighbors). 
+void computeReachabilityMatrix is O(N^2), or O(numVertices*numVertices).
+
+2. In a sparse graph, an adjacency list uses less space than an adjacency matrix. An adjacency matrix 
+uses space that is proportional to the vertices squared. Also, in an adjacency list, the neighbors of
+each vertex can be listed efficiently. In the matrix, the same operation is done proportionally to the 
+number of vertices, which can be higher. However, the adjacency matrix uses O(1) time to test if vertices
+are adjacent. The adjacency list is slower in this operation.
+
+3. Connected graphs mean that there is a path between every pair of vertices. That means only the top
+left to bottom right diagonal can be empty for the adjacency matrix of a connected graph. 
+Graph 1 and 5 are the only connected graphs.
+
+4. Graph 1 and 5 have the most 1's because they are connected, meaning they have the most paths.
+
+5. Running the search the opposite direction may result in the same output, since each path is undirected.
+However in a directed graph, the output may be exactly the opposite, since it would be searching opposite
+the directions of the paths.
